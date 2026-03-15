@@ -11,7 +11,7 @@ public class MainApp {
 
         context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
-        Car car = (Car) context.getBean("car");
-        car.drive();
+        Student student = context.getBean(Student.class);
+        student.display();
     }
 }

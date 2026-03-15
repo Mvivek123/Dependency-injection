@@ -1,12 +1,12 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <bean id="engine" class="com.spring.di.Engine"/>
-
-    <bean id="car" class="com.spring.di.Car">
-        <constructor-arg ref="engine"/>
-    </bean>
+    <context:component-scan base-package="com.spring.di"/>
 
 </beans>
